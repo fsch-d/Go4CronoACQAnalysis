@@ -1,0 +1,17 @@
+module "Go4UserAnalysis" {
+  requires cplusplus
+  module "TCronoACQAnalysis.h" { header "TCronoACQAnalysis.h" export * }
+  module "TCronoACQAnlEvent.h" { header "TCronoACQAnlEvent.h" export * }
+  module "TCronoACQAnlProc.h" { header "TCronoACQAnlProc.h" export * }
+  module "TCronoACQRawPar.h" { header "TCronoACQRawPar.h" export * }
+  module "TCronoACQCorrPar.h" { header "TCronoACQCorrPar.h" export * }
+  module "TCronoACQMomCalcPar.h" { header "TCronoACQMomCalcPar.h" export * }
+  module "TCronoACQMomCorrPar.h" { header "TCronoACQMomCorrPar.h" export * }
+  module "TCronoACQUnpackEvent.h" { header "TCronoACQUnpackEvent.h" export * }
+  module "TCronoACQUnpackProc.h" { header "TCronoACQUnpackProc.h" export * }
+  module "TCronoACQRawEvent.h" { header "TCronoACQRawEvent.h" export * }
+  module "TCronoACQEventSource.h" { header "TCronoACQEventSource.h" export * }
+  link "libGo4UserAnalysis.so"
+  export *
+}
+

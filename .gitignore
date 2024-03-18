@@ -1,0 +1,6 @@
+# exclude directories
+/CMakeFiles/*
+/G__Go4UserAnalysis.cxx
+/libGo4UserAnalysis*
+/CMakeCache.txt
+/Go4AnalysisPrefs.root
