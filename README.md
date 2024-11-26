@@ -5,10 +5,10 @@ This is a go4 (https://go4.gsi.de) user analysis using the data acquired with cr
 # Installation on Debian (Ubuntu)
 
 ## required apt packages:
-
+```rb
 $ sudo apt-get install dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev
 $ sudo apt-get install git xrootd-server qt6-base-dev libxkbcommon-dev libxkbfile-dev libfftw3-dev libfftw3-doc python3-pip freeglut3-dev
-
+```
 ## ROOT install (from source)
 
 $ git clone --branch latest-stable --depth=1 https://github.com/root-project/root.git root_src
