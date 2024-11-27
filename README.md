@@ -13,7 +13,7 @@ sudo apt-get install git xrootd-server qt6-base-dev libxkbcommon-dev libxkbfile-
 ```rb
 git clone --branch latest-stable --depth=1 https://github.com/root-project/root.git root_src  && \
 mkdir root_build root_install && cd root_build  && \
-cmake -DCMAKE_INSTALL_PREFIX=../root_install ../root_src  && \# && check cmake configuration output for warnings or errors
+cmake -Dwebgui=ON -Dqt6web=ON -Droot7=ON -DCMAKE_PREFIX_PATH=../xrootd/install -Dbuiltin_xrootd=OFF -Dxrootd=ON -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=../root_install ../root_src  && \# && check cmake configuration output for warnings or errors
 cmake --build . -- install -j4  && \ # if you have 4 cores available for compilation
 source ../root_install/bin/thisroot.sh # or thisroot.{fish,csh}
 ```
