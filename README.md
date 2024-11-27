@@ -21,7 +21,7 @@ source ../root_install/bin/thisroot.sh # or thisroot.{fish,csh}
 ```rb
 git clone --branch master --depth=1 https://github.com/gsi-ee/go4.git go4_src  && \
 mkdir go4_build go4_install && cd go4_build  && \
-cmake -Dqt6=ON -DCMAKE_INSTALL_PREFIX=../go4_install ../go4_src  && \ # && check cmake configuration output for warnings or errors
+cmake -Dqt6=ON -Dhdf5=ON -DCMAKE_INSTALL_PREFIX=../go4_install ../go4_src  && \ # && check cmake configuration output for warnings or errors
 cmake --build . -- install -j4  && \ # if you have 4 cores available for compilation
 source ../go4_install/go4login
 ```
