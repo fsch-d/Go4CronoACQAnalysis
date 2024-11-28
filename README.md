@@ -32,3 +32,17 @@ git clone --branch master --depth=1 https://github.com/fsch-d/Go4CronoACQAnalysi
 cmake .
 make all
 ```
+## Comments
+Add the following line to your .bashrc file:
+```rb
+source /PATH_TO_YOUR_GO$_DIRECTORY/go4_install/go4login
+```
+
+On Wayland, some of the widgets in the GUI might glitch. This should not happen if go4 is started with:
+```rb
+go4 --web
+```
+
+
+
+
