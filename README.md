@@ -8,12 +8,13 @@ This is a go4 (https://go4.gsi.de) user analysis using the data acquired with cr
 ```rb
 sudo apt-get install dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev && \
 sudo apt-get install git qt6-base-dev libxkbcommon-dev libxkbfile-dev libfftw3-dev libfftw3-doc python3-pip freeglut3-dev
+sudo apt-get install libqt6webenginecore6 libqt6webenginewidgets6 qt6-webengine-dev
 ```
 ## ROOT install (from source)
 ```rb
 git clone --branch latest-stable --depth=1 https://github.com/root-project/root.git root_src  && \
 mkdir root_build root_install && cd root_build  && \
-cmake -Dwebgui=ON -Dqt6web=ON -Droot7=ON -DCMAKE_PREFIX_PATH=../xrootd/install -Dbuiltin_xrootd=OFF -Dxrootd=ON -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=../root_install ../root_src  && \# && check cmake configuration output for warnings or errors
+cmake -Dwebgui=ON -Dqt6web=ON -Droot7=ON -Dbuiltin_xrootd=ON -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=../root_install ../root_src  && \# && check cmake configuration output for warnings or errors
 cmake --build . -- install -j4  && \ # if you have 4 cores available for compilation
 source ../root_install/bin/thisroot.sh # or thisroot.{fish,csh}
 ```
