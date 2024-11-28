@@ -29,4 +29,6 @@ source ../go4_install/go4login
 ## This user analysis
 ```rb
 git clone --branch master --depth=1 https://github.com/fsch-d/Go4CronoACQAnalysis.git Go4CronoACSAnalysis
+cmake .
+make all
 ```
